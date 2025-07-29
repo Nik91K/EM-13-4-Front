@@ -296,12 +296,12 @@ console.log(songsPerBand)
 
 // Завдання 20
 
-function getTrackDuration (): number[] {
+function trackDuration (): number[] {
   return bandList.flatMap(bands => bands.albums.flatMap(albums => albums.tracks.map(tracks => tracks.durationInSeconds)))
 }
 
 function mathDuration (): void {
-  const durations = getTrackDuration()
+  const durations = trackDuration()
   
   durations.forEach(durations => {
     let min = Math.floor(durations / 60)
